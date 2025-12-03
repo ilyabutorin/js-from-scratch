@@ -6,4 +6,13 @@
 */
 
 // your code
-let factorial
+let factorial;
+let count = 1;
+let result = 1;
+
+while (count <= 10) {
+  result = result * count;
+  count++;
+  factorial = result;
+}
+console.log("Lesson01-02 - факториал числа 10 = " + factorial);

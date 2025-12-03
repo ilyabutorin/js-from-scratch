@@ -13,4 +13,4 @@ while (number <= 20) {
     sum = result;
 }
 
-console.log(sum);
+console.log("Lesson01-01 - сумма чисел от 1 до 20 = " + sum);
