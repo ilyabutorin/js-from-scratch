@@ -6,3 +6,14 @@
 
 // your code
 let sum
+let number = 1;
+let result = 0;
+
+while (number <= 20) {
+  if (number % 2 !== 0) {
+    result = result + number;
+  }
+  number++;
+  sum = result;
+}
+console.log("Lesson01-03 - суммы всех нечётных чисел от 1 до 20 = " + sum);
