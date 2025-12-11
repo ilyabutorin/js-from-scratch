@@ -16,3 +16,6 @@ const hasTemporaryPass = false
 let isAccess
 
 // your code
+
+isAccess = (isAdmin || isVerifiedUser) && (hasTemporaryPass || hasSpecialPermission);
+console.log("Может ли пользователь получить доступ к ресурсу : " + isAccess);
