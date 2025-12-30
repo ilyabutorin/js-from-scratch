@@ -24,4 +24,4 @@ function includesElement(array, element) {
     }
 };
 
-includesElement();
+includesElement([1, 2, 3], 2);
