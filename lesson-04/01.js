@@ -13,4 +13,16 @@
 includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
-function includesElement() {}
+const someArr = [1, 2, 21, 3, 4, 5, 12];
+const needToFound = 21;
+
+function includesElement(array, element) {
+    let found = false;
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === element){
+            return found = true;
+        }
+    }
+};
+
+includesElement(someArr, needToFound);
