@@ -26,4 +26,4 @@ function findUniqueElements(arr) {
     return unique;
 };
 
-findUniqueElements();
+findUniqueElements([1, 2, 3, 2, 1, 4]);
