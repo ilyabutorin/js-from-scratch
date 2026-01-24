@@ -4,11 +4,28 @@
  */
 
 function isNumeric(str) {
-  // your code
-}
+  let numCount = 0;
+  let dotCount = 0;
 
-// console.log(isNumeric("123")) // Ожидаемый результат: true
-// console.log(isNumeric("12.3")) // Ожидаемый результат: true
-// console.log(isNumeric("123abc")) // Ожидаемый результат: false
-// console.log(isNumeric("abc")) // Ожидаемый результат: false
-// console.log(isNumeric(" ")) // Ожидаемый результат: false
+  for (let i = 0; i < str.length; i++) {
+    const el = str[i];
+
+    if(el >= '0' && el <= '9'){
+      numCount++
+    }else if(el === '.'){
+      dotCount++
+      if(dotCount > 1){
+        return false
+      }
+    }else {
+      return false
+    }
+  };
+  return numCount > 0;
+};
+
+  // console.log(isNumeric("123")) // Ожидаемый результат: true
+  // console.log(isNumeric("12.3")) // Ожидаемый результат: true
+  // console.log(isNumeric("123abc")) // Ожидаемый результат: false
+  // console.log(isNumeric("abc")) // Ожидаемый результат: false
+  // console.log(isNumeric(" ")) // Ожидаемый результат: false
