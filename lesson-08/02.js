@@ -3,25 +3,32 @@
  * Если строка является числом, функция должна возвращать true, в противном случае - false.
  */
 
+// function isNumeric(str) {
+//   let numCount = 0;
+//   let dotCount = 0;
+
+//   for (let i = 0; i < str.length; i++) {
+//     const el = str[i];
+
+//     if(el >= '0' && el <= '9'){
+//       numCount++
+//     }else if(el === '.'){
+//       dotCount++
+//       if(dotCount > 1){
+//         return false
+//       }
+//     }else {
+//       return false
+//     }
+//   };
+//   return numCount > 0;
+// };
+
 function isNumeric(str) {
-  let numCount = 0;
-  let dotCount = 0;
+  if (typeof str !== 'string') return false;
+  if (str.trim() === '') return false;
 
-  for (let i = 0; i < str.length; i++) {
-    const el = str[i];
-
-    if(el >= '0' && el <= '9'){
-      numCount++
-    }else if(el === '.'){
-      dotCount++
-      if(dotCount > 1){
-        return false
-      }
-    }else {
-      return false
-    }
-  };
-  return numCount > 0;
+  return !Number.isNaN(Number(str));
 };
 
   // console.log(isNumeric("123")) // Ожидаемый результат: true
