@@ -64,7 +64,6 @@ function updateCartDisplay() {
 
 clearCartButton.addEventListener('click', function () {
   cart.length = 0
-  messageBox.textContent = ''
   updateCartDisplay()
 })
 
